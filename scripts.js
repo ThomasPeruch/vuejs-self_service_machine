@@ -1,7 +1,7 @@
 var products = [
     {
         "photo": "img/big-mac.png",
-        "name": "Big Mac",
+        "name": "Big méqui",
         "price": 5.99,
         "active": false,
         "quantity": 1
@@ -63,4 +63,15 @@ var products = [
         "quantity": 1
     }
 ];
+
+const self_service_machine = {
+    data() {
+        return {
+           products: window.products
+        }
+    }
+
+};
+
+Vue.createApp(self_service_machine).mount('#app');
  

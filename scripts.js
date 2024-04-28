@@ -69,8 +69,20 @@ const self_service_machine = {
         return {
            products: window.products
         }
-    }
+    },
+    methods: {
+        total() {
+            var total = 0
+            
 
+            for (let index = 0; index < this.products.length; index++) {
+                if(this.products[index].active){
+                    total += (this.products[index].price * this.products[index].quantity)
+                }     
+            }
+            return total.toFixed(2)
+        }
+    }
 };
 
 Vue.createApp(self_service_machine).mount('#app');
